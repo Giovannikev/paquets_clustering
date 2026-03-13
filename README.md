@@ -21,4 +21,4 @@ Analyser des flux réseau et détecter des anomalies en utilisant des méthodes 
 ## Lancer le projet
 
 ```bash
-python src/main.py
+python -m src.main
