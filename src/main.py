@@ -11,12 +11,10 @@ from src.anomaly_detection import detect_anomalies_dbscan
 
 def main():
     data = load_dataset("data/paquets.csv")
-
     print("Aperçu des données")
     print(data.head())
 
     X_scaled, scaler = normalize_data(data)
-
     X_pca, pca = apply_pca(X_scaled)
 
     # KMEANS
@@ -29,7 +27,6 @@ def main():
 
     # DBSCAN
     d_labels, _ = dbscan_clustering(X_scaled)
-
     anomalies = detect_anomalies_dbscan(d_labels)
 
     print("Indices des anomalies détectées :")

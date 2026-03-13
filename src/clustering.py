@@ -1,7 +1,8 @@
+# Algorithmes de clustering
+
 from sklearn.cluster import KMeans, DBSCAN
 from scipy.cluster.hierarchy import linkage
 import numpy as np
-
 
 def kmeans_clustering(X, n_clusters=3):
     model = KMeans(n_clusters=n_clusters, random_state=42)
@@ -9,9 +10,7 @@ def kmeans_clustering(X, n_clusters=3):
     return labels, model
 
 def hierarchical_clustering(X, method="complete", sample_size=1000):
-    """
-    On échantillonne les données pour éviter un dendrogramme énorme
-    """
+    # On échantillonne les données pour éviter un dendrogramme énorme
     if X.shape[0] > sample_size:
         idx = np.random.choice(X.shape[0], sample_size, replace=False)
         X = X[idx]

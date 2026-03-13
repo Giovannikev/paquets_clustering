@@ -1,3 +1,4 @@
+# Prétraitement des données
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -6,6 +7,7 @@ def normalize_data(data: pd.DataFrame):
     # Normalise les données avec StandardScaler
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(data)
+    print("Normalisation des données effectuée.",X_scaled)
 
     return X_scaled, scaler
 
@@ -13,6 +15,7 @@ def apply_pca(X_scaled, n_components=2):
     # Réduction de dimension avec PCA
     pca = PCA(n_components=n_components)
     X_pca = pca.fit_transform(X_scaled)
+    print("Réduction de dimension effectuée.",X_pca)
 
     return X_pca, pca
 
