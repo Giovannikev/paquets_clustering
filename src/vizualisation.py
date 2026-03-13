@@ -2,12 +2,9 @@ import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
 import os
 
-
 OUTPUT_DIR = "output"
 
-
 def plot_clusters(X_pca, labels, title):
-
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     plt.figure(figsize=(8, 6))
@@ -25,7 +22,6 @@ def plot_clusters(X_pca, labels, title):
 
 
 def plot_dendrogram(Z):
-
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     plt.figure(figsize=(10, 6))

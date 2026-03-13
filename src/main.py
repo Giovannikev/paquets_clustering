@@ -10,7 +10,6 @@ from src.anomaly_detection import detect_anomalies_dbscan
 
 
 def main():
-
     data = load_dataset("data/paquets.csv")
 
     print("Aperçu des données")
@@ -35,7 +34,6 @@ def main():
 
     print("Indices des anomalies détectées :")
     print(anomalies)
-
 
 if __name__ == "__main__":
     main()
