@@ -1,0 +1,14 @@
+1. Combien de clusters sont identifiés ?
+Avec K-Means, 3 clusters sont identifiés (valeur fixée par le paramètre k). Le clustering hiérarchique montre plusieurs regroupements possibles selon la coupure du dendrogramme. DBSCAN détecte automatiquement les clusters et peut aussi identifier des anomalies.
+
+2. Les méthodes donnent-elles les mêmes résultats ?
+Non. Chaque méthode utilise un principe différent (centroïdes, hiérarchie, densité), donc les regroupements obtenus peuvent varier.
+
+3. Quels flux semblent anormaux ?
+Avec DBSCAN, les flux ayant le label -1 sont considérés comme anormaux car ils ne appartiennent à aucun cluster dense.
+
+4. Quelle méthode semble la plus adaptée ?
+DBSCAN, car il détecte automatiquement les anomalies et ne nécessite pas de fixer le nombre de clusters.
+
+5. Comment améliorer la détection ?
+Ajouter plus de caractéristiques réseau pertinentes, ajuster les paramètres de DBSCAN et utiliser d’autres algorithmes d’anomalie comme Isolation Forest.
